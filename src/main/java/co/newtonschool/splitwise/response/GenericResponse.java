@@ -1,3 +1,4 @@
+// GenericResponse.java
 package co.newtonschool.splitwise.response;
 
 public class GenericResponse {
@@ -9,5 +10,9 @@ public class GenericResponse {
 
     public String getMessage() {
         return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

@@ -17,7 +17,7 @@ public class UserExpenseRepository {
     }
 
     public List<UserExpense> saveAllUserExpense(List<UserExpense> userExpenseList) {
-        for(UserExpense userExpense : userExpenseList) {
+        for (UserExpense userExpense : userExpenseList) {
             saveUserExpense(userExpense);
         }
 
@@ -27,10 +27,10 @@ public class UserExpenseRepository {
     public List<UserExpense> getUserExpenseListByExpenseId(int expenseId) {
         List<UserExpense> userExpenseList = new ArrayList<>();
 
-        for(Map.Entry<Integer, UserExpense> entry : userExpenseByIdMap.entrySet()) {
+        for (Map.Entry<Integer, UserExpense> entry : userExpenseByIdMap.entrySet()) {
             UserExpense userExpense = entry.getValue();
 
-            if(userExpense.getExpense().getExpenseId() == expenseId) {
+            if (userExpense.getExpense().getExpenseId() == expenseId) {
                 userExpenseList.add(userExpense);
             }
         }
@@ -41,10 +41,10 @@ public class UserExpenseRepository {
     public List<UserExpense> getUserExpenseListByUserId(int userId) {
         List<UserExpense> userExpenseList = new ArrayList<>();
 
-        for(Map.Entry<Integer, UserExpense> entry : userExpenseByIdMap.entrySet()) {
+        for (Map.Entry<Integer, UserExpense> entry : userExpenseByIdMap.entrySet()) {
             UserExpense userExpense = entry.getValue();
 
-            if(userExpense.getUser().getUserId() == userId) {
+            if (userExpense.getUser().getUserId() == userId) {
                 userExpenseList.add(userExpense);
             }
         }
