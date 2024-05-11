@@ -29,6 +29,15 @@ public class ExpenseResponse {
         this.userExpenses = userExpenses;
     }
 
+    ......
+
+    public ExpenseResponse(int expenseId2, String expenseTitle, float expenseAmount, String name, LocalDate localDate,
+            LocalTime localTime) {
+        //TODO Auto-generated constructor stub
+    }
+
+    ....
+
     // Getters and setters
     public int getExpenseId() {
         return expenseId;

@@ -4,6 +4,8 @@ package co.newtonschool.splitwise.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+
 public class Expense {
     private int expenseId;
     private String description;
@@ -63,5 +65,29 @@ public class Expense {
 
     public void setUsersInvolved(List<User> usersInvolved) {
         this.usersInvolved = usersInvolved;
+    }
+
+    public String  getExpenseTitle(){
+       return "Hello";
+       .....
+    }
+
+    public float getExpenseAmount(){
+        return 3.9F;
+        ....
+    }
+    
+    public UserExpense getShare(){
+        return new UserExpense();
+        .....
+    }
+
+    public LocalDateTime getExpenseDateTime() {
+        return createdAt;
+    }
+
+    public Enum<HttpStatus> getSplitType() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSplitType'");
     }
 }

@@ -4,6 +4,7 @@ public class User {
     private int userId;
     private String firstName;
     private String lastName;
+    private String username;
 
     public User(int userId, String firstName, String lastName) {
         this.userId = userId;
@@ -34,6 +35,10 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getUsername(){
+        return username;
     }
 
     public void setName(String firstName, String lastName) {

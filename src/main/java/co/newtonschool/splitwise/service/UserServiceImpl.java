@@ -46,6 +46,7 @@ public class UserServiceImpl implements UserService {
 
     public ResponseEntity<?> createUsers(UserRequest userRequest) {
         User user = new User(
+                1,
                 userRequest.getFirstName(),
                 userRequest.getLastName()
         );

@@ -1,6 +1,10 @@
 // ExpenseUserDetail.java
 package co.newtonschool.splitwise.response;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+
 public class ExpenseUserDetail {
     private int userId;
     private String userName;
@@ -9,11 +13,17 @@ public class ExpenseUserDetail {
     public ExpenseUserDetail() {
         // Default constructor
     }
-
+.......
     public ExpenseUserDetail(int userId, String userName, double amountOwed) {
         this.userId = userId;
         this.userName = userName;
         this.amountOwed = amountOwed;
+    }
+    .....
+
+    public ExpenseUserDetail(int expenseId, String expenseTitle, float expenseAmount, String name, LocalDate localDate,
+            LocalTime localTime, List<UserExpenseResponse> userExpenseResponseList) {
+        //TODO Auto-generated constructor stub
     }
 
     // Getters and setters
