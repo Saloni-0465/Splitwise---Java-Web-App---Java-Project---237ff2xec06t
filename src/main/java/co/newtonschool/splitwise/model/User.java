@@ -1,24 +1,21 @@
 package co.newtonschool.splitwise.model;
 
 public class User {
+    private static int id = 1;
     private int userId;
     private String firstName;
     private String lastName;
     private String username;
 
-    public User(int userId, String firstName, String lastName) {
-        this.userId = userId;
+    public User(String firstName, String lastName) {
+        userId = id++;
         this.firstName = firstName;
         this.lastName = lastName;
+        setUsername();
     }
 
-    // Getters and setters
     public int getUserId() {
         return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public String getFirstName() {
@@ -37,12 +34,20 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getUsername(){
-        return username;
+    private void setUsername() {
+        int randomNumber = (int)((Math.random() + 1) * 10000);
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(firstName.toLowerCase())
+                .append("_")
+                .append(lastName.toLowerCase())
+                .append("_")
+                .append(randomNumber);
+
+        this.username = stringBuilder.toString();
     }
 
-    public void setName(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public String getUsername() {
+        return username;
     }
 }

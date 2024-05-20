@@ -1,19 +1,16 @@
-// ExpenseUserResponse.java
 package co.newtonschool.splitwise.response;
 
 public class ExpenseUserResponse {
-    private String expenseTitle; // Title of the expense
-    private float expenseAmount; // Total amount of the expense
-    private float share; // Share of the expense for a user
+    private String expenseTitle;
+    private float expenseAmount;
+    private float share;
 
-    // Constructor to initialize the attributes
     public ExpenseUserResponse(String expenseTitle, float expenseAmount, float share) {
         this.expenseTitle = expenseTitle;
         this.expenseAmount = expenseAmount;
         this.share = share;
     }
 
-    // Getter and setter methods for the attributes
     public String getExpenseTitle() {
         return expenseTitle;
     }

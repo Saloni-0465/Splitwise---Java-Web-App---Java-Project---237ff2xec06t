@@ -1,4 +1,3 @@
-// ExpenseResponse.java
 package co.newtonschool.splitwise.response;
 
 import co.newtonschool.splitwise.model.UserExpense;
@@ -9,36 +8,21 @@ import java.util.List;
 
 public class ExpenseResponse {
     private int expenseId;
-    private String description;
-    private double amount;
-    private LocalDate date;
-    private LocalTime time;
-    private List<UserExpense> userExpenses;
+    private String expenseTitle;
+    private float expenseAmount;
+    private String splitType;
+    private LocalDate expenseDate;
+    private LocalTime expenseTime;
 
-    public ExpenseResponse() {
-        // Default constructor
-    }
-
-    public ExpenseResponse(int expenseId, String description, double amount, LocalDate date, LocalTime time,
-            List<UserExpense> userExpenses) {
+    public ExpenseResponse(int expenseId, String expenseTitle, float expenseAmount, String splitType, LocalDate expenseDate, LocalTime expenseTime) {
         this.expenseId = expenseId;
-        this.description = description;
-        this.amount = amount;
-        this.date = date;
-        this.time = time;
-        this.userExpenses = userExpenses;
+        this.expenseTitle = expenseTitle;
+        this.expenseAmount = expenseAmount;
+        this.splitType = splitType;
+        this.expenseDate = expenseDate;
+        this.expenseTime = expenseTime;
     }
 
-    ......
-
-    public ExpenseResponse(int expenseId2, String expenseTitle, float expenseAmount, String name, LocalDate localDate,
-            LocalTime localTime) {
-        //TODO Auto-generated constructor stub
-    }
-
-    ....
-
-    // Getters and setters
     public int getExpenseId() {
         return expenseId;
     }
@@ -47,43 +31,43 @@ public class ExpenseResponse {
         this.expenseId = expenseId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getExpenseTitle() {
+        return expenseTitle;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setExpenseTitle(String expenseTitle) {
+        this.expenseTitle = expenseTitle;
     }
 
-    public double getAmount() {
-        return amount;
+    public float getExpenseAmount() {
+        return expenseAmount;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setExpenseAmount(float expenseAmount) {
+        this.expenseAmount = expenseAmount;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public String getSplitType() {
+        return splitType;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setSplitType(String splitType) {
+        this.splitType = splitType;
     }
 
-    public LocalTime getTime() {
-        return time;
+    public LocalDate getExpenseDate() {
+        return expenseDate;
     }
 
-    public void setTime(LocalTime time) {
-        this.time = time;
+    public void setExpenseDate(LocalDate expenseDate) {
+        this.expenseDate = expenseDate;
     }
 
-    public List<UserExpense> getUserExpenses() {
-        return userExpenses;
+    public LocalTime getExpenseTime() {
+        return expenseTime;
     }
 
-    public void setUserExpenses(List<UserExpense> userExpenses) {
-        this.userExpenses = userExpenses;
+    public void setExpenseTime(LocalTime expenseTime) {
+        this.expenseTime = expenseTime;
     }
 }

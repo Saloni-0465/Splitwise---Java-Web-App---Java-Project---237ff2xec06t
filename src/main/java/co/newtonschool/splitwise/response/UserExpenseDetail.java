@@ -1,69 +1,70 @@
-// UserExpenseDetail.java
+
 package co.newtonschool.splitwise.response;
 
 import java.util.List;
 
 public class UserExpenseDetail {
-    // private int expenseId;
-    // private String expenseTitle;
-    // private double amount;
-    // private double share;
-
-    int userId;
+    private int id;
     private String firstName;
     private String lastName;
     private String username;
     private List<ExpenseUserResponse> expenseUserResponseList;
     private float totalShare;
 
-
-    // public UserExpenseDetail(int expenseId, String expenseTitle, double amount, double share) {
-    //     this.expenseId = expenseId;
-    //     this.expenseTitle = expenseTitle;
-    //     this.amount = amount;
-    //     this.share = share;
-    // }
-
-    public UserExpenseDetail(int userId, String firstName, String lastName, String username, List<ExpenseUserResponse> expenseUserResponseList, float totalShare) {
-        this.firstName=firstName;
+    public UserExpenseDetail(int id, String firstName, String lastName, String username, List<ExpenseUserResponse> expenseUserResponseList, float totalShare) {
+        this.id = id;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
-        this.expenseUserResponseList=expenseUserResponseList;
-        this.totalShare=totalShare;
-
-        //TODO Auto-generated constructor stub
+        this.expenseUserResponseList = expenseUserResponseList;
+        this.totalShare = totalShare;
     }
 
-    // Getters and setters
-    // public int getExpenseId() {
-    //     return expenseId;
-    // }
+    public int getId() {
+        return id;
+    }
 
-    // public void setExpenseId(int expenseId) {
-    //     this.expenseId = expenseId;
-    // }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    // public String getExpenseTitle() {
-    //     return expenseTitle;
-    // }
+    public String getFirstName() {
+        return firstName;
+    }
 
-    // public void setExpenseTitle(String expenseTitle) {
-    //     this.expenseTitle = expenseTitle;
-    // }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-    // public double getAmount() {
-    //     return amount;
-    // }
+    public String getLastName() {
+        return lastName;
+    }
 
-    // public void setAmount(double amount) {
-    //     this.amount = amount;
-    // }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-    // public double getShare() {
-    //     return share;
-    // }
+    public String getUsername() {
+        return username;
+    }
 
-    // public void setShare(double share) {
-    //     this.share = share;
-    // }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public List<ExpenseUserResponse> getExpenseUserResponseList() {
+        return expenseUserResponseList;
+    }
+
+    public void setExpenseUserResponseList(List<ExpenseUserResponse> expenseUserResponseList) {
+        this.expenseUserResponseList = expenseUserResponseList;
+    }
+
+    public float getTotalShare() {
+        return totalShare;
+    }
+
+    public void setTotalShare(float totalShare) {
+        this.totalShare = totalShare;
+    }
 }

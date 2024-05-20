@@ -1,40 +1,27 @@
-// UserExpenseResponse.java
 package co.newtonschool.splitwise.response;
 
-import java.util.List;
-
 public class UserExpenseResponse {
-    // private int userId;
-    // private List<UserExpenseDetail> userExpenses;
-
     private String username;
     private float share;
 
-    // public UserExpenseResponse(int userId, List<UserExpenseDetail> userExpenses) {
-    //     this.userId = userId;
-    //     this.userExpenses = userExpenses;
-    // }
-
     public UserExpenseResponse(String username, float share) {
-        this.share=share;
-        this.username=username;
-        //TODO Auto-generated constructor stub
+        this.username = username;
+        this.share = share;
     }
 
-    // Getters and setters
-    // public int getUserId() {
-    //     return userId;
-    // }
+    public String getUsername() {
+        return username;
+    }
 
-    // public void setUserId(int userId) {
-    //     this.userId = userId;
-    // }
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-    // public List<UserExpenseDetail> getUserExpenses() {
-    //     return userExpenses;
-    // }
+    public float getShare() {
+        return share;
+    }
 
-    // public void setUserExpenses(List<UserExpenseDetail> userExpenses) {
-    //     this.userExpenses = userExpenses;
-    // }
+    public void setShare(float share) {
+        this.share = share;
+    }
 }

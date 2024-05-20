@@ -1,8 +1,6 @@
-// UserResponseList.java
 package co.newtonschool.splitwise.response;
 
-import java.util.List; 
-import co.newtonschool.splitwise.model.User; 
+import java.util.List;
 
 public class UserResponseList {
     private List<UserResponse> userResponseList;
@@ -11,16 +9,11 @@ public class UserResponseList {
         this.userResponseList = userResponseList;
     }
 
-    public List<UserResponse> getUserResponseList(){
+    public List<UserResponse> getUserResponseList() {
         return userResponseList;
     }
 
-    
-    // public List<UserResponse> getUsers() {
-    //     return userResponseList;
-    // }
-
-    public void setUsers(List<UserResponse> userResponseList) {
+    public void setUserResponseList(List<UserResponse> userResponseList) {
         this.userResponseList = userResponseList;
     }
 }

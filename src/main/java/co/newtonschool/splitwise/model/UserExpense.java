@@ -1,34 +1,19 @@
-// UserExpense.java
 package co.newtonschool.splitwise.model;
 
 public class UserExpense {
+    private static int id = 1;
     private int userExpenseId;
     private User user;
     private Expense expense;
-    private double amount;
     private float share;
 
-    public UserExpense() {
-        // Default constructor
+    public UserExpense(User user, Expense expense, float share) {
+        userExpenseId = id++;
+        this.user = user;
+        this.expense = expense;
+        this.share = share;
     }
 
-    // public UserExpense(int userExpenseId, User user, Expense expense, double amount) {
-    //     this.userExpenseId = userExpenseId;
-    //     this.user = user;
-    //     this.expense = expense;
-    //     this.amount = amount;
-    // }
-
-    ......
-
-    public UserExpense(User user2, Expense expense2, float share2) {
-        //TODO Auto-generated constructor stub
-    }
-
-
-    .......
-
-    // Getters and setters
     public int getUserExpenseId() {
         return userExpenseId;
     }
@@ -53,17 +38,21 @@ public class UserExpense {
         this.expense = expense;
     }
 
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
     public float getShare() {
-        // TODO Auto-generated method stub
-        return this.share;
-        // throw new UnsupportedOperationException("Unimplemented method 'getShare'");
+        return share;
+    }
+
+    public void setShare(float share) {
+        this.share = share;
+    }
+
+    @Override
+    public String toString() {
+        return "UserExpense{" +
+                "userExpenseId=" + userExpenseId +
+                ", user=" + user +
+                ", expense=" + expense +
+                ", share=" + share +
+                '}';
     }
 }

@@ -55,7 +55,7 @@ public class ExpenseServiceImpl implements ExpenseService {
         Expense expense = new Expense(
                 expenseRequest.getExpenseTitle(),
                 expenseRequest.getExpenseAmount(),
-                Expense.splitType.valueOf(expenseRequest.getSplitType()),
+                Expense.SplitType.valueOf(expenseRequest.getSplitType()),
                 LocalDateTime.now()
         );
 
